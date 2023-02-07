@@ -1,0 +1,129 @@
+
+body{
+    background-color: #faf9fa;
+
+
+}
+h1{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: #9095ff 2px 2px;
+    font-size: 3rem;
+    background-color: #9095ff; 
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: 'Philosopher', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70vh;
+
+}
+.container .game .box{
+    min-height:150px;
+    min-width:150px;
+    background-color: #e5e5f7;
+    opacity: 0.5;
+    background-image:  linear-gradient(135deg, #9095ff 25%, transparent 25%), linear-gradient(225deg, #9095ff 25%, transparent 25%), linear-gradient(45deg, #9095ff 25%, transparent 25%), linear-gradient(315deg, #9095ff 25%, #e5e5f7 25%);
+    background-position:  24px 0, 24px 0, 0 0, 0 0;
+    background-size: 48px 48px;
+    background-repeat: repeat;
+    margin: 5px;
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:5rem;
+    color:white;
+    text-shadow: black 5px 5px;
+    cursor: pointer;
+}
+.flip-animation{
+    animation: flip-horizontal-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+
+}
+@keyframes flip-horizontal-top {
+    0% {
+        
+              transform: rotateY(0);
+    }
+    100% {
+        background-image: none;
+        background-color: #9095ff;
+        transform: rotateY(-180deg);
+    }
+  }
+  
+.container .game .box:first-child{
+    margin-left:0%;
+}
+.container .game .row{
+    display:flex;
+}
+.popup{
+    height:200px;
+    width:800px;
+    position:absolute;
+    top:30%;
+    left:20%;
+    background-color:white;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius:12px;
+    transform:scale(0);
+}
+.popup .nav{
+    height:50px;
+    width:100%;
+    display: flex;
+    align-items:center;
+}
+.popup .nav i{
+    margin-left:95%;
+    font-size:2rem;
+    cursor: pointer;
+}
+.popup .nav i:hover{
+    color:#9095ff;
+    transition-duration:0.3s;
+}
+.popup img{
+    width:25%;
+}
+.popup .title{
+    font-family:Poppins;
+    font-size:2rem;
+}
+.popup .winner{
+    font-family:Poppins;
+    font-size:3rem;
+    color:#9095ff;
+}
+
+@media screen and (max-width: 850px) {
+    h1 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .popup{
+        height:200px;
+        width:300px;
+    }
+    .popup .nav i{
+        margin-left:90%;
+        font-size:2rem;
+        cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .container .game .box{
+        min-height:100px;
+        min-width:100px;
+    }
+  }
